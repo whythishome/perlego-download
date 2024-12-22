@@ -33,3 +33,6 @@ document.getElementById('clear').addEventListener('click', () => {
   chrome.runtime.sendMessage({ type: 'resetAndStartCapture' });
 	console.log('clear')
 });
+document.getElementById('download').addEventListener('click', () => {
+    chrome.runtime.sendMessage({ type: 'downloadData' });
+});
