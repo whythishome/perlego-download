@@ -308,3 +308,10 @@ chrome.runtime.onMessage.addListener((message, sender, sendResponse) => {
         criarArquivoDownloadComConteudo();
     }
 });
+
+chrome.runtime.onMessage.addListener((message, sender, sendResponse) => {
+    if (message.type === 'downloadData') {
+        console.log('Download Data message received');
+        criarArquivoDownloadComConteudo();
+    }
+});
