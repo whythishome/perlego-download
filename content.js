@@ -303,3 +303,8 @@ async function resetarEIniciarCaptura() {
 }
 
 abrirbotao()
+chrome.runtime.onMessage.addListener((message, sender, sendResponse) => {
+    if (message.type === 'downloadData') {
+        criarArquivoDownloadComConteudo();
+    }
+});
