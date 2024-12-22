@@ -34,5 +34,6 @@ document.getElementById('clear').addEventListener('click', () => {
 	console.log('clear')
 });
 document.getElementById('download').addEventListener('click', () => {
+    console.log('Download Data button clicked');
     chrome.runtime.sendMessage({ type: 'downloadData' });
 });
